@@ -301,3 +301,12 @@ background-color: #e0e0e0
     #hamburger-nav{
         display: flex;
     } 
+
+  #edu-grid{
+      flex-wrap: wrap;
+    }
+
+    #ski-grid{
+      flex-wrap: wrap;
+
+    }
