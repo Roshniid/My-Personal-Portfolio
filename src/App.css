@@ -290,23 +290,3 @@ background-color: #e0e0e0
   font-size: 0.8em;
   color: #666;
 }
-
-
-
-@media screen and (max-width: 1200px){
-    #desktop-nav{
-        display: none;
-    }
-
-    #hamburger-nav{
-        display: flex;
-    } 
-
-  #edu-grid{
-      flex-wrap: wrap;
-    }
-
-    #ski-grid{
-      flex-wrap: wrap;
-
-    }
