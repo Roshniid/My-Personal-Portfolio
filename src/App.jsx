@@ -87,7 +87,7 @@ const education = [
       {/* Education */}
       <section id='education' className='education-section'>
         <h2>Education</h2>
-        <div id='edu-grid' className='education-grid'>
+        <div className='education-grid'>
           {education.map((item, index) => (
             <div key={index} className='education-item'>
               <img src={item.icon} alt={item.title} className='education-icon-round' /> 
@@ -105,7 +105,7 @@ const education = [
       {/* --- SKILLS SECTION --- */}
       <section id='skills' className='skills-section'>
         <h2>Skills</h2>
-        <div id='ski-grid' className='skills-grid'>
+        <div className='skills-grid'>
           {skills.map((skill, index) => (
             <div key={index} className='skill-item'>
               <img src={skill.icon} alt={skill.name} className='skill-icon' />
