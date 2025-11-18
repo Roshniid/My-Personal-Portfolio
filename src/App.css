@@ -1,0 +1,351 @@
+/* ================================== */
+/* 1. GLOBAL RESET & TYPOGRAPHY       */
+/* ================================== */
+
+body {
+  /* Fix typo: 'Poppins' needs to be in quotes */
+  margin: 0;
+  font-family: 'Poppins', sans-serif; 
+  line-height: 1.6; /* Improves readability */
+  color: #333; /* Default text color */
+  background-color: #ffffff;
+}
+
+/* Base link styling */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent (usually good) */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #007bff; /* Highlight links on hover */
+}
+
+/* ================================== */
+/* 2. HEADER & NAVIGATION             */
+/* ================================== */
+
+.header {
+  background-color: #124271; /* Darker, professional blue/grey */
+  padding: 20px 40px;
+  color: white;
+  text-align: center; /* Fix typo: changed 'centre' to 'center' */
+  
+  /* Use Flexbox for better alignment */
+  display: flex;
+  justify-content: space-between; /* Puts name/title on left, nav on right */
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+}
+
+.header-info {
+  display: flex;
+}
+
+/* --- Add this new block to App.css --- */
+.title-group {
+  display: flex;
+  align-items: center; /* Vertically centers the name and profession */
+  gap: 10px; /* Space between name and profession */
+}
+
+.title-group h1 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #ecf0f1;
+}
+
+.profession-title {
+  color: aqua; /* Highlight the profession with an accent color */
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.1em;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px;
+}
+
+/* Styling the profile picture */
+.profile-pic {
+  width: 80px; 
+  height: 80px;
+  
+  /* Shape and Border */
+  border-radius: 50%; /* Makes it perfectly circular */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border: 3px solid #3498db; /* Blue border for pop */
+  
+  /* Spacing */
+  margin-right: 15px;
+}
+
+/* Adjust header h1/p margin because they are now nested */
+.header h1 {
+  /* Existing styles... */
+  margin-bottom: 5px; /* Add small space below name */
+}
+
+.header p {
+  /* Existing styles... */
+  margin-top: 0; /* Remove top margin on profession */
+}
+
+.header nav a {
+  color: white; /* Force white links in the header */
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.header nav a:hover {
+  text-decoration: none;
+  color: aqua;
+}
+
+/* ================================== */
+/* 3. SECTION STYLING (ABOUT, CONTACT)*/
+/* ================================== */
+
+/* General section styling */
+.about-section, .projects-section, .contact-section {
+  padding: 60px 20px; /* Increased padding */
+  text-align: center;
+}
+
+.about-section {
+  background-color: #f9f9f9; /* Light contrast background */
+}
+
+.about-section p{
+  width: 100%;
+  font-size: 1.15rem;
+  text-align: justify;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-section {
+  background-color: #f9f9f9;
+}
+
+/* Consistency for all section headers */
+section h2 {
+  font-size: 2.2em;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* ================================== */
+/* 4. PROJECTS SECTION SPECIFIC       */
+/* ================================== */
+
+/* Changed selector from .project-section to .projects-section to match JSX */
+.projects-section {
+  background-color: #ffffff; /* White background for contrast */
+}
+
+.projects-list {
+  display: flex;
+  /*By default, items are on a single line (nowrap), but setting it to wrap allows them to wrap to the next line when they run out of space*/
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between items */
+  margin-top: 30px;
+}
+
+.project-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px; /* Fixed width for card layout */
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px); /* Lift card slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+  color: #166aa1; /* Highlight project titles */
+  margin-top: 0;
+  font-size: 1.4em;
+}
+
+.project-item h4 {
+  font-size: 1em;
+  color: #7f8c8d; /* Subdued description color */
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+/* ================================== */
+/* 5. FOOTER                          */
+/* ================================== */
+
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+
+.button{
+  background-color: #0d487d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.button:hover{
+  color: white;
+  text-decoration: none;
+  background-color: #1d85ca;
+}
+
+/* ================================== */
+/* 4. SKILLS SECTION SPECIFIC         */
+/* ================================== */
+
+.skills-section{
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.skills-grid{
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 40px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+
+.skill-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  
+}
+
+.skill-icon{
+  width: 70px;
+  height: 70px;
+  border-radius: 20%;
+  background-color: #f0f0f0;
+  border: 2px solid #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover{
+  transform: scale(1.1);
+}
+
+.skill-item p{
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* ================================== */
+/* 5. EDUCATION SECTION SPECIFIC (Matching Skills Style) */
+/* ================================== */
+
+.education-section{
+  margin-top: 30px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.education-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+.education-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center; /* Center content (icon and text) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.education-item:hover{
+background-color: #124271
+}
+
+.education-item:hover .education-details h3{
+  color: white; /* Sets the heading text color to white */
+}
+
+/* Circular icon style for education (same size/look as skills icon) */
+.education-icon-round {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 2px solid #3498db;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  object-fit: contain;
+  margin: 0 auto 15px auto; /* Center the image and add bottom margin */
+  display: block; /* Ensures margin: auto works for centering */
+}
+
+.education-details h3 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+  font-size: 1.2em;
+}
+
+.education-details .institution {
+  margin: 0;
+  font-size: 1em;
+  color: #7f8c8d;
+}
+
+.education-details .year {
+  margin: 5px 0 0 0;
+  /* font-style: italic; */
+  font-weight: 600;
+  font-size: 0.9em;
+  color: #3498db;
+}
+
+
+
+
+
+
+
+
+
