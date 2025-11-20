@@ -1,11 +1,11 @@
 import './App.css'
-import Header from './components/Header';
-import About from './components/About';
-import Education from './components/Education';
-import Skills from './components/Skills';
-import Project from './components/Project';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from '/Header';
+import About from './About';
+import Education from '.Education';
+import Skills from './Skills';
+import Project from './Project';
+import Contact from './Contact';
+import Footer from './Footer';
 
 
 const name = "Roshni Das";
