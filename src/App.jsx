@@ -39,7 +39,6 @@ const education = [
       year: '2021 - 2025', 
       icon: 'https://img.icons8.com/color/48/graduation-cap.png'
     },
-    // Adding the missing education entries from your screenshot:
     { 
       title: 'Class XII', 
       institution: 'Vivekananda Mission School', 
@@ -102,7 +101,7 @@ const education = [
       </section>
 
 
-      {/* --- SKILLS SECTION --- */}
+      {/* Skills */}
       <section id='skills' className='skills-section'>
         <h2>Skills</h2>
         <div className='skills-grid'>
@@ -128,7 +127,7 @@ const education = [
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className='button' /* Retains the button styling via CSS */
+                className='button'
               >
                 See more
               </a>
@@ -137,7 +136,7 @@ const education = [
         </div>
       </section>
 
-      {/* Contact - Corrected anchor tag issue */}
+      {/* Contact */}
       <section id='contact' className='contact-section'>
         <h2>Contact Me</h2>
         <p>If you would like to get in touch, feel free to email me at <a href=" mailto:das.roshni1707@gmail.com">roshnidas@gmail.com</a>
