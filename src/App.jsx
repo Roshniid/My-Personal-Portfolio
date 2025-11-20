@@ -1,9 +1,19 @@
 import './App.css'
-const profilePicUrl = "https://placehold.co/80x80/2c3e50/ffffff?text=RD"; 
+import Header from './components/Header';
+import About from './components/About';
+import Education from './components/Education';
+import Skills from './components/Skills';
+import Project from './components/Project';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+
+const name = "Roshni Das";
+const profession = "Java Developer";
+const profilePicUrl = "https://placehold.co/80x80/2c3e50/ffffff?text=RD";
+
 
 function App() {
-  const name = "Roshni Das";
-  const profession = "Java Developer";
   
   const projects = [
     {
@@ -39,6 +49,7 @@ const education = [
       year: '2021 - 2025', 
       icon: 'https://img.icons8.com/color/48/graduation-cap.png'
     },
+    // Adding the missing education entries from your screenshot:
     { 
       title: 'Class XII', 
       institution: 'Vivekananda Mission School', 
@@ -57,96 +68,14 @@ const education = [
 
   return (
     <div className="App">
-      {/* Header */}
-      <header className='header'>
-        <div className='header-info'>
-          {/* Image source now uses the placeholder URL */}
-          <img src={profilePicUrl} alt="Roshni Das Profile" className='profile-pic'/>
-          <div className='title-group'> {/* NEW: Wrapper for name and profession */}
-        <h1>{name}</h1>
-        <span className='profession-title'>{profession}</span> {/* CHANGED: p to span and added class */}
-          </div>
-        </div>
-        
-        <nav>
-          <a href='#about'>About</a>
-          <a href='#education'>Education</a>
-          <a href='#skills'>Skills</a>
-          <a href='#projects'>Projects</a>
-          <a href='#contact'>Contact</a>
-        </nav>
-      </header>
 
-      {/* About */}
-      <section id='about' className='about-section'>
-        <h2>About Me</h2>
-        <p>Hello! I am {name}, really passionate to become a {profession}. I’m working towards gaining the full-stack knowledge and become a good software developer... do something that I love and can keep on doing willingly. I’m 23 years old, born and brought up in Kolkata, West Bengal. People who know me would describe me as resilient, dependable and resourceful. I always like to keep this learning mindset, increasing my knowledge horizon and wanting to make myself better each day. In my free time I indulge in my hobbies of reading fictional books, or writing some stuff of my own or extensively listening of music.</p>
-      </section>
-
-      {/* Education */}
-      <section id='education' className='education-section'>
-        <h2>Education</h2>
-        <div className='education-grid'>
-          {education.map((item, index) => (
-            <div key={index} className='education-item'>
-              <img src={item.icon} alt={item.title} className='education-icon-round' /> 
-              <div className='education-details'>
-                <h3>{item.title}</h3>
-                <p className='institution'>{item.institution}</p>
-                <p className='year'>{item.year}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-
-      {/* Skills */}
-      <section id='skills' className='skills-section'>
-        <h2>Skills</h2>
-        <div className='skills-grid'>
-          {skills.map((skill, index) => (
-            <div key={index} className='skill-item'>
-              <img src={skill.icon} alt={skill.name} className='skill-icon' />
-              <p>{skill.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Project */}
-      <section id='projects' className='projects-section'>
-        <h2>Projects</h2>
-        <div className='projects-list'>
-          {/* map iterates over array and renders = returns jsx object of projects... key acts as unique identifier for div to help react manage updates to the dom*/}
-          {projects.map((project, index) =>(
-            <div key={index} className='project-item'>
-              <h3>{project.title}</h3>
-              <h4>{project.description}</h4>
-              <a 
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className='button'
-              >
-                See more
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id='contact' className='contact-section'>
-        <h2>Contact Me</h2>
-        <p>If you would like to get in touch, feel free to email me at <a href=" mailto:das.roshni1707@gmail.com">roshnidas@gmail.com</a>
-        </p>
-      </section>
-
-      {/* Footer */}
-      <footer className='footer'>
-        <p>© 2025. All Rights Reserved</p>
-      </footer>
+      <Header/>
+      <About/>
+      <Education/>
+      <Skills/>
+      <Project/>
+      <Contact/>
+      <Footer/>
 
     </div>
   )
