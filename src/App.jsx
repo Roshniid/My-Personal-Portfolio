@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './Header.jsx';
 import About from './About.jsx';
-import Education from '.Education.jsx';
+import Education from './Education.jsx';
 import Skills from './Skills.jsx';
 import Project from './Project.jsx';
 import Contact from './Contact.jsx';
