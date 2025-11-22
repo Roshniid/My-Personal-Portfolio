@@ -1,1 +1,1 @@
-I recently started using React and decided to apply what I learnt and make a React Vite project. Deployed it on Vercel.
+# A React Vite project deployed on Vercel : https://portfolio-personal-one-lime.vercel.app/
